@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/makinacorpus/Leaflet.MeasureControl#readme",
   "dependencies": {
-    "leaflet-draw": "^0.3.2"
+    "leaflet-draw": "^0.4.12"
   },
   "devDependencies": {
     "eslint": "^3.4.0",
@@ -32,6 +32,6 @@
     "minifier": "^0.8.0"
   },
   "peerDependencies": {
-    "leaflet": "^0.7.3"
+    "leaflet": "^1.0.3"
   }
 }
