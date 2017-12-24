@@ -23,9 +23,10 @@
   L.Polyline.Measure = L.Draw.Polyline.extend({
     addHooks: function () {
       L.Draw.Polyline.prototype.addHooks.call(this);
-      if (this._map) {
-        this._map.on('contextmenu', this._onCancel, this);
-        this._map.doubleClickZoom.disable();
+      var map = this._map;
+      if (map) {
+        map.on('contextmenu', this._onCancel, this);
+        map.doubleClickZoom.disable();
 
         this._startShape();
 
@@ -175,7 +176,7 @@
     },
 
     onAdd: function (map) {
-      var link = null;
+      var link;
       var className = 'leaflet-control-draw';
 
       this._container = L.DomUtil.create('div', 'leaflet-bar');
